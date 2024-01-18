@@ -1,0 +1,286 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\addbibresource{ref.bib}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Tran Ngoc Duan} % Your Name
+\newcommand{\course}{Your Program} % Your Program
+\newcommand{\roll}{SOC Analyst} % Your Roll No.
+\newcommand{\phone}{886800305} % Your Phone Number
+\newcommand{\emaila}{ngocduan0612@gmail.com} %Email 1
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2.35cm,clip]{NITRR_logo_bw.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +84 \phone}\\
+  {\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  {Cybersecurity Engineer} &  \href{https://www.credly.com/users/tran-duan}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {Credly Profile}}\\
+  {Ho Chi Minh city } &  \href{https://github.com/luckystars0612}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {University of Information Technology, UIT - HCMVNU} & \href{https://www.linkedin.com/in/ngoc-duan-tran-bb2231250/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+%-----------objectives-----------
+\section{\textbf{Objectives}}
+  Dedicated and results-driven Cybersecurity Engineer with a passion for ensuring the confidentiality, integrity, and availability of organizational assets. Seeking a challenging role where my technical expertise, proactive approach to threat mitigation, and commitment to continuous learning can contribute to enhancing the security posture of an innovative and forward-thinking organization. Eager to leverage hands-on experience in vulnerability assessments, incident response, and security architecture to safeguard digital environments and uphold industry best practices. Committed to staying abreast of emerging threats and technologies to provide robust and effective cybersecurity solutions.
+\vspace{-5.5mm}
+%
+\vspace{10pt}
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Technical Skills}}
+  \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \item[--] Proficient in managing source code with git
+    \item[--] Experience in Linux system administration and command-line tools.
+    \item[--] Experience in SIEM, SOAR system
+    \item[--]  Understanding basic network protocols and networking concepts.
+    \item[--]  Scripting with Bash, Python programming.
+    \item[--]  Familiar with plenty of web attack types, as well as other types of vulnerability
+    \item[--]  Familiar with security tools like Wireshark, Burpsuite, Freda,...
+    \item[--]  Continuous training platform: hackthebox, tryhackme,...
+  \end{itemize}
+\vspace{-8.5mm}
+
+\vspace{10pt}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {CMC TS}{Ho Chi Minh city}
+      {SOC Analyst Tier 1}{August 2022 - Present}
+      % \vspace{-2.0mm}
+      \resumeItemListStart
+    \item{Continuous learning, participate in certification program}
+    \item{ Analyze multiple log sources (Windows events log, Syslog, Firewall log, WAF log, M365 Defender, IDS/IPS,…), escalate to Tier 2 if detect abnormal.}
+    \item {Monitor, analyze, and handle offenses/alert security for multi-customer (banking, education,…) in IBM QRadar platform.}
+    \item {Create tickets, reports for customers if detects threat actor, suspicious traffic or incidents.}
+    \item{Collecting and maintaining artifacts of incidents following defined playbooks on IBM Resilient SOAR serves the purpose of future investigations if needed.}
+    \item{Searching, hunting events log for investigation, collaborate with Tier 2 to tuning rule.}
+    \item{Design, build and maintain automated Python scripts for daily reports, integrated with IBM QRadar API and IBM Resilient SOAR API, Portal API to speed up the process of creating tickets for customers, minimizing time pressure for handling incident. }
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    % \resumeSubheading
+    %   {Company Name}{City}
+    %   {Your Role}{Event dates}
+    %   \vspace{-2.0mm}
+    %   \resumeItemListStart
+    % \item {Work description line 1}
+    % \item {Work description line 2}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+\vspace{10pt}
+
+
+%%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Information Technology, UIT - HCMVNU}{GPA: 8.6}
+      {Honor class in Information Security}{2018-2022}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+\vspace{10pt}
+
+%-------publications----------------
+\section{\textbf{Research Publications}}
+\nocite{*}
+\printbibliography[heading={subbibliography},title={Journal Articles},type=article]
+ 
+\vspace{-5.5mm}
+%
+\vspace{10pt}
+%-------certifications----------------
+\section{\textbf{Certifications}}
+\begin{itemize}[leftmargin=0.2in]
+    \setlength{\itemsep}{0pt}
+    \small{
+         \item{
+         \href{https://www.credly.com/badges/e8b06aca-daa8-4ada-8a2b-5b1101c6d553/public_url}{CompTIA CySA+ ce Certification}}
+         \hfill
+        \textit{March 2023}\\
+        \item{
+        \href{https://www.credly.com/badges/ef02356b-e103-4528-ae2a-e165a3446a59/public_url}{IBM QRadar SIEM Foundation}} 
+        \hfill
+        \textit{August 2022}\\
+        \item{
+        \href{https://www.credly.com/badges/e88cf058-ef87-487d-8312-6f9547b40c27/public_url}{IBM Resilient SOAR Foundations}}
+        \hfill
+        \textit{August 2022}
+    }
+ \end{itemize}
+\vspace{-5.5mm}
+%
+\vspace{10pt}
+
+%-------Soft skills----------------
+\section{\textbf{Soft skills}}
+\begin{itemize}[leftmargin=0.2in]
+    \setlength{\itemsep}{0pt}
+    \small{
+        \item{Time management}\\
+        \item{Teamwork}\\
+        \item{Good problem solving}\\
+        \item{Logical and critical thinking}\\
+        \item{Work under high pressure}\\
+        \item{Self-learning}\\
+        \item{Adaptability}
+        
+    }
+ \end{itemize}
+
+
+
+
+
+%-------------------------------------------
+\end{document}
